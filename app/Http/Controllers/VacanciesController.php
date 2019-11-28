@@ -11,6 +11,7 @@ use App\Http\Requests\VacancyCreateRequest;
 use App\Http\Requests\VacancyUpdateRequest;
 use App\Repositories\VacancyRepository;
 use App\Validators\VacancyValidator;
+
 use DB;
 
 /**
@@ -30,6 +31,8 @@ class VacanciesController extends Controller
      */
     protected $validator;
 
+
+
     /**
      * VacanciesController constructor.
      *
@@ -40,6 +43,7 @@ class VacanciesController extends Controller
     {
         $this->repository = $repository;
         $this->validator  = $validator;
+        $this->middleware('auth')->except('index','show');
     }
 
     /**
@@ -50,7 +54,10 @@ class VacanciesController extends Controller
     public function index()
     {
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
+        $categories = DB::table('category_jobs')->get();
+        $cities = DB::table('cities')->get();
         $vacancies = $this->repository->paginate(1);
+
         if (request()->wantsJson()) {
 
             return response()->json([
@@ -58,7 +65,7 @@ class VacanciesController extends Controller
             ]);
         }
 
-        return view('vacancies.index', compact('vacancies'));
+        return view('vacancies.index', compact('vacancies', 'cities', 'categories'));
     }
 
     /**

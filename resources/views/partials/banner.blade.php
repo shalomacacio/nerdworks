@@ -10,7 +10,7 @@
               <div class="row">
                 <div class="col-lg-5 col-md-6 col-xs-12">
                   <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Job Title or Company Name">
+                    <input class="form-control" type="text" placeholder="Título da Vaga">
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-12">
@@ -18,13 +18,10 @@
                     <div class="search-category-container">
                       <label class="styled-select">
                         <select>
-                          <option value="none">Locations</option>
-                          <option value="none">New York</option>
-                          <option value="none">California</option>
-                          <option value="none">Washington</option>
-                          <option value="none">Birmingham</option>
-                          <option value="none">Chicago</option>
-                          <option value="none">Phoenix</option>
+                          <option value="none">Local</option>
+                          @foreach ($cities as $city)
+                            <option value="{{$city->id}}">{{$city->title}}</option>
+                          @endforeach
                         </select>
                       </label>
                     </div>
@@ -36,15 +33,11 @@
                     <div class="search-category-container">
                       <label class="styled-select">
                         <select>
-                          <option>All Categories</option>
-                          <option>Finance</option>
-                          <option>IT & Engineering</option>
-                          <option>Education/Training</option>
-                          <option>Art/Design</option>
-                          <option>Sale/Markting</option>
-                          <option>Healthcare</option>
-                          <option>Science</option>
-                          <option>Food Services</option>
+                          <option>Categorias</option>
+                          @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{$category->description}}</option>
+                          @endforeach
+
                         </select>
                       </label>
                     </div>

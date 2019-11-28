@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/slicknav.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
-  <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/main-pink.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 
 </head>

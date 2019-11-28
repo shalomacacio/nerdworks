@@ -50,7 +50,7 @@
           </ul>
           <h5>Benefícios</h5>
           <p>{{ $vacancy->benefities }}</p>
-          <a href="#" class="btn btn-common">Apply job</a>
+          {{-- <a href="#" class="btn btn-common">Apply job</a> --}}
         </div>
       </div>
       <div class="col-lg-4 col-md-12 col-xs-12">
