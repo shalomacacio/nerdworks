@@ -8,13 +8,16 @@
   <title>nerDWorks</title>
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/line-icons.css">
-  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="assets/css/owl.theme.default.css">
-  <link rel="stylesheet" href="assets/css/slicknav.min.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  {{-- summernote.css"> --}}
+  {{-- <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"> --}}
+
+  <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/line-icons.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/slicknav.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 
 </head>

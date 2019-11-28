@@ -10,78 +10,56 @@
             <span class="lni-menu"></span>
             <span class="lni-menu"></span>
           </button>
-          <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+        <a href="{{route('vacancies.index')}}" class="navbar-brand"><img src="{{ asset('assets/img/logo.png') }}" alt=""></a>
+
         </div>
         <div class="collapse navbar-collapse" id="main-navbar">
           <ul class="navbar-nav mr-auto w-100 justify-content-end">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">
-                Home
+            <a class="nav-link" href="{{route('vacancies.index')}}">
+                Vagas
               </a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                  Eventos
+                </a>
+              </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Pages
+                Forum
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="about.html">About</a></li>
-                <li><a class="dropdown-item" href="job-page.html">Job Page</a></li>
-                <li><a class="dropdown-item" href="job-details.html">Job Details</a></li>
-                <li><a class="dropdown-item" href="resume.html">Resume Page</a></li>
-                <li><a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a></li>
-                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
-                <li><a class="dropdown-item" href="pricing.html">Pricing Tables</a></li>
-                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                <li><a class="dropdown-item" href="#">Infra - Redes</a></li>
+                <li><a class="dropdown-item" href="#">Infra - Hardware</a></li>
+                <li><a class="dropdown-item" href="#">Desenvolvimento</a></li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Candidates
+            <li class="nav-item active">
+              <a class="nav-link" href="{{route('vacancies.index')}}">
+                Classificados
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="browse-jobs.html">Browse Jobs</a></li>
-                <li><a class="dropdown-item" href="browse-categories.html">Browse Categories</a></li>
-                <li><a class="dropdown-item" href="add-resume.html">Add Resume</a></li>
-                <li><a class="dropdown-item" href="manage-resumes.html">Manage Resumes</a></li>
-                <li><a class="dropdown-item" href="job-alerts.html">Job Alerts</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Employers
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="post-job.html">Add Job</a></li>
-                <li><a class="dropdown-item" href="manage-jobs.html">Manage Jobs</a></li>
-                <li><a class="dropdown-item" href="manage-applications.html">Manage Applications</a></li>
-                <li><a class="dropdown-item" href="browse-resumes.html">Browse Resumes</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Blog
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="blog.html">Blog - Right Sidebar</a></li>
-                <li><a class="dropdown-item" href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
-                <li><a class="dropdown-item" href="blog-full-width.html"> Blog full width</a></li>
-                <li><a class="dropdown-item" href="single-post.html">Blog Single Post</a></li>
-              </ul>
-            </li>
+              </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">
+              <a class="nav-link" href="#">
                 Contact
               </a>
             </li>
             <li class="nav-item">
-              @guest
-                <a class="nav-link" href="{{ route('login') }}">Login</a>
-              @else
-                <a class="nav-link" href="{{ route('register') }}">Register</a>
-              @endguest
+            @guest
+              <a class="nav-link" href="{{ route('login') }}">Login</a>
+            @else
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ Auth::user()->name }}
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{route('logout')}}">Sair</a></li>
+              </ul>
             </li>
+            @endguest
             <li class="button-group">
-              <a href="post-job.html" class="button btn btn-common">Postar Vagas</a>
+            <a href="{{route('vacancies.create')}}" class="button btn btn-common">Postar Vagas</a>
             </li>
           </ul>
         </div>

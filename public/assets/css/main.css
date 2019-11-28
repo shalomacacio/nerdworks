@@ -574,8 +574,8 @@ button:focus {
   }
 }
 
-/* ========================================================================== 
-   Scroll To Up 
+/* ==========================================================================
+   Scroll To Up
    ========================================================================== */
 .back-to-top {
   display: none;
@@ -1657,6 +1657,18 @@ button:focus {
 .job-listings-featured {
   display: inline-block;
   width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0px 0px 14px rgba(191, 191, 191, 0.24);
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.job-listings-featured-2 {
+  display: inline-block;
+  width: 100%;
+  background: #f8f8f8;
   margin-bottom: 20px;
   padding: 15px;
   box-shadow: 0px 0px 14px rgba(191, 191, 191, 0.24);
@@ -3405,7 +3417,7 @@ label {
 }
 
 /* ==========================================================================
-   Blog 
+   Blog
    ========================================================================== */
 #blog .blog-item-wrapper {
   background: #fff;
@@ -3539,6 +3551,75 @@ label {
 .blog-post .post-content p {
   margin-bottom: 30px;
 }
+/* custom  */
+.page-item:last-child .page-link{
+  border-top-right-radius:.25rem;
+  border-bottom-right-radius:.25rem
+}
+
+.page-item.active .page-link{
+  border-radius: 4px !important;
+  padding: 5px 10px;
+  margin: 0 3px;
+  min-width: 40px;
+  height: 40px;
+  line-height: 30px;
+  font-weight: 400;
+  position: relative;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: #00BCD4;
+  display: block;
+  color: #fff;
+}
+
+.page-item.disabled .page-link{
+  border-radius: 4px !important;
+  padding: 5px 10px;
+  margin: 0 3px;
+  min-width: 40px;
+  height: 40px;
+  line-height: 30px;
+  font-weight: 400;
+  position: relative;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: #00BCD4;
+  display: block;
+  color: #fff;
+}
+
+.pagination-lg .page-link{
+  padding:.75rem 1.5rem;
+  font-size:1.125rem;
+  line-height:1.5
+}
+
+.pagination-lg .page-item:first-child .page-link{
+  border-top-left-radius:.3rem;
+  border-bottom-left-radius:.3rem
+}
+
+.pagination-lg .page-item:last-child .page-link{
+  border-top-right-radius:.3rem;
+  border-bottom-right-radius:.3rem
+}
+
+.pagination-sm .page-link{
+  padding:.25rem .5rem;
+  font-size:.7875rem;
+  line-height:1.5
+}
+.pagination-sm .page-item:first-child .page-link{
+  border-top-left-radius:.2rem;
+  border-bottom-left-radius:.2rem
+}
+.pagination-sm .page-item:last-child .page-link{
+  border-top-right-radius:.2rem;
+  border-bottom-right-radius:.2rem
+}
+
+/* end custom  */
 
 .pagination {
   margin: 0;

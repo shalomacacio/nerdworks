@@ -2,8 +2,9 @@
     <div class="row space-100 justify-content-center">
       <div class="col-lg-10 col-md-12 col-xs-12">
         <div class="contents">
-          <h2 class="head-title">Find the job that fits your life</h2>
-          <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus, <br> id tincidunt nisi porta sit amet. Suspendisse et sapien varius, pellentesque dui non.</p>
+          <h2 class="head-title">Encontre vagas para o seu perfil!</h2>
+          <p>
+              Não é que os profissionais de TI se acham melhores ou são "estrelas" como dizem. É que eles tem uma espécie de potencial que os diferenciam dos outros; eles enxergam o mundo virtual.</p>
           <div class="job-search-form">
             <form>
               <div class="row">

@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-3 col-xs-12">
           <div class="widget">
-            <div class="footer-logo"><img src="assets/img/logo-footer.png" alt=""></div>
+            <div class="footer-logo"><img src="{{ asset('assets/img/logo-footer.png') }}" alt=""></div>
             <div class="textwidget">
               <p>Sed consequat sapien faus quam bibendum convallis quis in nulla. Pellentesque volutpat odio eget diam cursus semper.</p>
             </div>

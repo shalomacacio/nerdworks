@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {return view('home'); });
-Route::get('/login', function () { return "Pagina de Login"; })->name('login');
+Route::get('/', function(){ return redirect()->route('vacancies.index');});
+Route::get('login', 'AuthenticateController@login')->name('login');
+Route::get('logout', 'AuthenticateController@logout')->name('logout');
+Route::post('auth', 'AuthenticateController@auth')->name('auth');
+
 Route::get('/register', function () { return "Pagina de Home"; })->name('register');
+Route::resource('vacancies', 'VacanciesController');
+
