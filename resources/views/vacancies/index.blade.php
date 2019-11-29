@@ -5,26 +5,13 @@
 <section class="job-browse section">
 
   <div class="container">
+
       <div class="section-header">
         <h2 class="section-title">Vagas Recentes</h2>
         <p> Todos os dias com novas vagas, encontre uma que se encaixe no seu perfil! Let's Go</p>
-      </div>
-      <div class="row">
-        <!-- SEARCH -->
-          {{-- <div class="col-lg-12 col-md-12 col-xs-12">
-              <div class="wrap-search-filter row">
-                  <div class="col-lg-5 col-md-5 col-xs-12">
-                      <input type="text" class="form-control" placeholder="Keyword: Name, Tag">
-                  </div>
-                  <div class="col-lg-5 col-md-5 col-xs-12">
-                      <input type="text" class="form-control" placeholder="Location: City, State, Zip">
-                  </div>
-                  <div class="col-lg-2 col-md-2 col-xs-12">
-                      <button type="submit" class="btn btn-common float-right">Filter</button>
-                  </div>
-              </div>
-          </div> --}}
 
+
+      <div class="col-lg-12 col-md-12 col-xs-12">
           <div class="job-search-form">
               <form>
                 <div class="row">
@@ -70,7 +57,27 @@
                 </div>
               </form>
             </div>
-            <br>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <!-- SEARCH -->
+          {{-- <div class="col-lg-12 col-md-12 col-xs-12">
+              <div class="wrap-search-filter row">
+                  <div class="col-lg-5 col-md-5 col-xs-12">
+                      <input type="text" class="form-control" placeholder="Keyword: Name, Tag">
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-xs-12">
+                      <input type="text" class="form-control" placeholder="Location: City, State, Zip">
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-xs-12">
+                      <button type="submit" class="btn btn-common float-right">Filter</button>
+                  </div>
+              </div>
+          </div> --}}
+
+        <div class="col-lg-3 col-md-6 col-xs-12"> </div>
           <!-- VAGAS -->
           @foreach($vacancies as $vacancy)
           <div class="col-lg-12 col-md-12 col-xs-12">
