@@ -46,7 +46,26 @@
 
                         <div class="form-group">
                           <label class="control-label">Descrição</label>
-                          <textarea class="form-control" rows="5" name="description" placeholder="descrição da vada"></textarea>
+                          <textarea class="form-control" rows="15" name="description" placeholder="descrição da vaga"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Benefícios<span>(optional)</span></label>
+                            <textarea class="form-control" name="benefities" placeholder=" VL+VT+CB"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="control-label">Regime </label>
+                          <div class="search-category-container">
+                              <label class="styled-select">
+                                  <select class="dropdown-product selectpicker">
+                                      <option value=null>--Selecione--</option>
+                                      @foreach ($contracts as $contract)
+                                        <option value={{ $contract->id }}>{{ $contract->description }}</option>
+                                      @endforeach
+                                  </select>
+                              </label>
+                          </div>
                         </div>
 
                         <div class="form-group">
@@ -63,36 +82,19 @@
                             </div>
                           </div>
 
-                          <div class="form-group">
-                              <label class="control-label">Número de Vagas</label>
-                              <input type="text" class="form-control" name="number_vacancies" placeholder="numero de vagas">
-                          </div>
-
-
                         <div class="form-group">
-                            <label class="control-label">Data Publicação <span>(optional)</span></label>
-                            <input type="date" class="form-control" name="dt_publish"  placeholder="yyyy-mm-dd">
+                          <label class="control-label">Data Publicação <span>(optional)</span></label>
+                          <input type="date" class="form-control" name="dt_publish"  placeholder="yyyy-mm-dd">
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label">Enviar Currículo Até: <span>(optional)</span></label>
-                            <input type="date" class="form-control" name="dt_expire" placeholder="yyyy-mm-dd">
+                          <label class="control-label">Enviar Currículo Até: <span>(optional)</span></label>
+                          <input type="date" class="form-control" name="dt_expire" placeholder="yyyy-mm-dd">
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label">Requisitos Obrigatórios<span>(optional)</span></label>
-                            <textarea class="form-control" rows="5" name="requirements" placeholder="descrição da vada"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label">Benefícios<span>(optional)</span></label>
-                            <textarea class="form-control" rows="5" name="benefities" placeholder=" VL+VT+CB"></textarea>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label class="control-label">Email da vaga </label>
-                            <input type="email" class="form-control" name="email" placeholder="enviar email para ">
+                          <label class="control-label">Email da vaga </label>
+                          <input type="email" class="form-control" name="email" placeholder="enviar email para ">
                         </div>
 
                         <div class="form-group">
@@ -100,23 +102,14 @@
                             <input type="tex" class="form-control" name="contact" placeholder="ligar para  ">
                         </div>
 
-                        <div class="divider">
-                            <h3 class="job-title">Dados da Empresa</h3>
-                        </div>
-
                         <div class="form-group">
-                            <label class="control-label">Nome Fantasia</label>
-                            <input type="text" class="form-control" placeholder="Digite o nome da empresa">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label">Observação:<span>(optional)</span></label>
-                            <textarea class="form-control" rows="5" name="note" placeholder="Observação"></textarea>
+                            <label class="control-label">Salário: <span>(optional)</span></label>
+                            <input type="tex" class="form-control" name="salary" placeholder=" 2500.00  ">
                         </div>
 
                         {{-- <a href="#" class="btn btn-common">Submit your job</a> --}}
                         <button type="submit" class="btn btn-common"> Incluir Vaga</button>
-                      <input type="hidden"  name="user_id" value="{{Auth::user()->id}}">
+                      <input type="hidden"  name="user_id" value="{{ Auth::user()->id }}">
                     </form>
                 </div>
             </div>
@@ -126,5 +119,12 @@
 @endsection
 
 @push('scripts')
-    <script src="/example.js"></script>
+<script>
+
+<script src="{{ URL::asset('assets/js/contact-form-script.js') }}"></script>
+  $(function () {
+    // Summernote
+    $('.textarea').summernote()
+  })
+</script>
 @endpush

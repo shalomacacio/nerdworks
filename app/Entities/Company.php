@@ -20,6 +20,25 @@ class Company extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable =
+    [
+      'company_name',
+      'register_number',
+      'logo',
+      'contact',
+      'email',
+      'site',
+      'facebook',
+      'twitter',
+      'linkedin',
+      'instagram',
+      'flg_active',
+      'user_id'
+    ];
+
+
+    public function user(){
+      return $this->belongsTo("App\Entities\User");
+    }
 
 }

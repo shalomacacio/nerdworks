@@ -39,6 +39,7 @@ class CompaniesController extends Controller
     {
         $this->repository = $repository;
         $this->validator  = $validator;
+        $this->middleware('auth');
     }
 
     /**
@@ -59,6 +60,11 @@ class CompaniesController extends Controller
         }
 
         return view('companies.index', compact('companies'));
+    }
+
+    public function create()
+    {
+        return view('companies.create');
     }
 
     /**

@@ -31,7 +31,7 @@ class Vacancy extends Model implements Transformable
       'dt_expire',
       'requirements',
       'benefities',
-      'contract_types',
+      'contract_type_id',
       'note',
       'contact',
       'email',

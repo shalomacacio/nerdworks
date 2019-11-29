@@ -39,7 +39,7 @@ body {
   color: #9a9a9a;
   font-size: 14px;
   font-weight: 400;
-  background: #fff;
+  background: #e4e4e4;
   overflow-x: hidden;
 }
 
@@ -1663,6 +1663,7 @@ button:focus {
   -webkit-transition: all 0.4s ease 0s;
   -moz-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
+  background: #f1f1f1;
 }
 
 .job-listings-featured-2 {
@@ -2987,6 +2988,7 @@ Categories All Page Style
 
 .job-detail .content-area {
   padding: 15px 20px;
+  background: #ffffff;
   box-shadow: 0px 0px 14px rgba(191, 191, 191, 0.24);
 }
 
@@ -3018,6 +3020,7 @@ Categories All Page Style
 
 .sideber {
   padding: 15px;
+  background: #ffffff;
   box-shadow: 0px 0px 14px rgba(191, 191, 191, 0.24);
 }
 

@@ -8,7 +8,7 @@
           <div class="widget">
             <div class="footer-logo"><img src="{{ asset('assets/img/logo-footer.png') }}" alt=""></div>
             <div class="textwidget">
-              <p>Amigos que encontram empresas que encontram soluções que econtram pessoas que fazem amigos.<br>Assim aumentamos nossa NerdWorks um loop infinito de integração </p>
+              <p>Amigos que encontram empresas que encontram soluções que econtram pessoas que fazem amigos.<br>Assim aumentamos nossa NerdWorks, um loop infinito de conexões </p>
             </div>
           </div>
         </div>
@@ -44,7 +44,6 @@
               <li><a class="facebook" href="#"><i class="lni-facebook-filled"></i></a></li>
               <li><a class="twitter" href="#"><i class="lni-twitter-filled"></i></a></li>
               <li><a class="linkedin" href="#"><i class="lni-linkedin-fill"></i></a></li>
-              <li><a class="google-plus" href="#"><i class="lni-google-plus"></i></a></li>
             </ul>
           </div>
         </div>

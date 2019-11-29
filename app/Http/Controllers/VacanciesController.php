@@ -11,7 +11,7 @@ use App\Http\Requests\VacancyCreateRequest;
 use App\Http\Requests\VacancyUpdateRequest;
 use App\Repositories\VacancyRepository;
 use App\Validators\VacancyValidator;
-
+use Illuminate\Support\Facades\Auth;
 use DB;
 
 /**
@@ -55,17 +55,18 @@ class VacanciesController extends Controller
     {
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
         $categories = DB::table('category_jobs')->get();
+        $company = DB::table('companies')->where('id', Auth::user()->id)->get();
         $cities = DB::table('cities')->get();
-        $vacancies = $this->repository->paginate(1);
+        $vacancies = $this->repository->paginate(10);
+        $cities = DB::table('cities')->get();
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $vacancies,
             ]);
         }
 
-        return view('vacancies.index', compact('vacancies', 'cities', 'categories'));
+        return view('vacancies.index', compact('vacancies', 'cities', 'categories', 'company'));
     }
 
     /**
@@ -135,7 +136,8 @@ class VacanciesController extends Controller
     {
         $categories = DB::table('category_jobs')->get();
         $cities = DB::table('cities')->get();
-        return view('vacancies.create', compact('categories', 'cities'));
+        $contracts= DB::table('contract_types')->get();
+        return view('vacancies.create', compact('categories', 'cities', 'contracts'));
     }
 
     /**

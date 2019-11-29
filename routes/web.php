@@ -14,8 +14,10 @@
 Route::get('/', function(){ return redirect()->route('vacancies.index');});
 Route::get('login', 'AuthenticateController@login')->name('login');
 Route::get('logout', 'AuthenticateController@logout')->name('logout');
-Route::get('register', 'AuthenticateController@regisgter')->name('register');
+Route::get('register', 'AuthenticateController@register')->name('register');
 Route::post('auth', 'AuthenticateController@auth')->name('auth');
 
+Route::resource('users', 'UsersController');
 Route::resource('vacancies', 'VacanciesController');
+Route::resource('companies', 'CompaniesController');
 

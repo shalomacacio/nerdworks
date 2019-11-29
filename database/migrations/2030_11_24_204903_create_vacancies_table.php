@@ -18,12 +18,10 @@ class CreateVacanciesTable extends Migration
 		Schema::create('vacancies', function(Blueprint $table) {
             $table->increments('id');
             $table->string('title'); //titulo da vaga
-            $table->text('description'); //descricao da vaga
-            $table->integer('number_vacancies')->default(1); //quantidade de vagas
-            $table->text('requirements')->nullable();; //requisitos obrigatorios
+            $table->longText('description'); //descricao da vaga
             $table->text('benefities')->nullable(); //beneficios
             $table->integer('contract_type_id')->nullable(); //tipo de contratacao
-            $table->text('note')->nullable(); //observacao
+            $table->decimal('salary')->nullable(); //salario
 
             //oneToMany
             $table->integer('category_job_id')->unsigned()->default(1);
@@ -43,8 +41,8 @@ class CreateVacanciesTable extends Migration
 
             $table->string('contact')->nullable(); //telefone de contato
             $table->string('email'); //email de contato
-
-            $table->integer('status_vacancies_id')->default(1); //status da vaga -- ativa canceclada etc
+            $table->integer('status_vacancies_id')->default(1); //status da vaga -- 1-ativa 0-canceclada etc
+            $table->tinyInteger('flg_active')->default(0);
 
             $table->timestamps();
             $table->softDeletes();

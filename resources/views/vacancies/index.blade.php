@@ -24,6 +24,53 @@
                   </div>
               </div>
           </div> --}}
+
+          <div class="job-search-form">
+              <form>
+                <div class="row">
+                  <div class="col-lg-5 col-md-6 col-xs-12">
+                    <div class="form-group">
+                      <input class="form-control" type="text" placeholder="Título da Vaga">
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="form-group">
+                      <div class="search-category-container">
+                        <label class="styled-select">
+                          <select>
+                            <option value="none">Local</option>
+                            @foreach ($cities as $city)
+                              <option value="{{$city->id}}">{{$city->title}}</option>
+                            @endforeach
+                          </select>
+                        </label>
+                      </div>
+                      <i class="lni-map-marker"></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="form-group">
+                      <div class="search-category-container">
+                        <label class="styled-select">
+                          <select>
+                            <option>Categorias</option>
+                            @foreach ($categories as $category)
+                              <option value="{{$category->id}}">{{$category->description}}</option>
+                            @endforeach
+
+                          </select>
+                        </label>
+                      </div>
+                      <i class="lni-layers"></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-1 col-md-6 col-xs-12">
+                    <button type="submit" class="button"><i class="lni-search"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <br>
           <!-- VAGAS -->
           @foreach($vacancies as $vacancy)
           <div class="col-lg-12 col-md-12 col-xs-12">
@@ -35,7 +82,7 @@
                           </div>
                           <div class="job-details">
                             <h3>{{ $vacancy->title }}</h3>
-                              <span class="company-neme"> Empresa: @isset($vacancy->user->company->title)@endisset @empty($vacancy->user->company->title) Não informada  @endempty </span>
+                              <span class="company-neme"> Empresa: @isset($company->company_name)@endisset @empty($company->company_name) Não informada  @endempty </span>
                               <div class="tags">
                                   <span><i class="lni-map-marker"></i>{{ $vacancy->city->title }}</span>
                                   <span><i class="lni-user"></i>{{ $vacancy->user->name }}</span>

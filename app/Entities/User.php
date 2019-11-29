@@ -51,4 +51,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
       $this->attributes['password'] = env('PASSWORD_HASH') ? Hash::make($value) : $value;
     }
 
+    public function company(){
+      return $this->belongsTo("App\Entities\Company");
+    }
+
 }

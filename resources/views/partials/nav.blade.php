@@ -25,7 +25,7 @@
                   Eventos
                 </a>
               </li>
-            <li class="nav-item dropdown">
+            {{-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Forum
               </a>
@@ -39,10 +39,10 @@
               <a class="nav-link" href="{{route('vacancies.index')}}">
                 Classificados
               </a>
-              </li>
+              </li> --}}
             <li class="nav-item">
               <a class="nav-link" href="#">
-                Contact
+                Contato
               </a>
             </li>
             <li class="nav-item">
@@ -55,6 +55,8 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{{route('logout')}}">Sair</a></li>
+                <li><a class="dropdown-item" href="{{route('companies.create')}}">Cadastrar Empresa</a></li>
+                <li><a class="dropdown-item" href="#">Gerenciar Vagas</a></li>
               </ul>
             </li>
             @endguest
@@ -65,6 +67,6 @@
         </div>
       </div>
     </div>
-    <div class="mobile-menu" data-logo="assets/img/logo-mobile.png"></div>
+    <div class="mobile-menu" data-logo="{{ asset('assets/img/logo-mobile.png') }}"></div>
   </nav>
   <!-- Navbar End -->

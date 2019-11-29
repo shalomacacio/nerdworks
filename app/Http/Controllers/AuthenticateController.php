@@ -24,7 +24,7 @@ class AuthenticateController extends Controller
     }
 
     public function register(){
-      return view('auth.login');
+      return view('auth.register');
     }
     public function logout()
     {
