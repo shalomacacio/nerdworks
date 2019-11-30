@@ -55,7 +55,7 @@ class VacanciesController extends Controller
     {
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
         $categories = DB::table('category_jobs')->get();
-        $company = DB::table('companies')->where('id', Auth::user()->id)->get();
+        // $company = DB::table('companies')->where('id', Auth::user()->id)->get();
         $cities = DB::table('cities')->get();
         $vacancies = $this->repository->paginate(10);
         $cities = DB::table('cities')->get();
@@ -66,7 +66,7 @@ class VacanciesController extends Controller
             ]);
         }
 
-        return view('vacancies.index', compact('vacancies', 'cities', 'categories', 'company'));
+        return view('vacancies.index', compact('vacancies', 'cities', 'categories'));
     }
 
     /**

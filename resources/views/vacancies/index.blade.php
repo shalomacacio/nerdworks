@@ -92,7 +92,7 @@
                               <span class="company-neme"> Empresa: @isset($company->company_name)@endisset @empty($company->company_name) Não informada  @endempty </span>
                               <div class="tags">
                                   <span><i class="lni-map-marker"></i>{{ $vacancy->city->title }}</span>
-                                  <span><i class="lni-user"></i>{{ $vacancy->user->name }}</span>
+                                  <span><i class="lni-user"></i>@isset($vacancy->user->name)@endisset @empty($vacancy->user->name) Não informada  @endempty</span>
                               </div>
                           </div>
                       </div>
